@@ -299,7 +299,8 @@ class CodeGenerator:
             if last_token_type in operands_end and t in operands_start:
                  # Special case: Function call ID + ( is allowed.
                  # If last was ID and current is PARAB -> ALLOW.
-                 if last_token_type == TokenEnum.ID.name and t == TokenEnum.PARAB.name:
+                 if (last_token_type == TokenEnum.ID.name and t == TokenEnum.PARAB.name) or \
+                    (last_token_type == TokenEnum.ID.name and t == TokenEnum.COLCHETEA.name):
                      pass
                  else:
                      # Break if operand follows operand (missing operator)

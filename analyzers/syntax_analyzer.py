@@ -226,6 +226,10 @@ class Parser:
         self.grammar_function_call()
       else:
         self.expect_token(TokenEnum.ID)
+        while self.check_token(TokenEnum.COLCHETEA):
+            self.expect_token(TokenEnum.COLCHETEA)
+            self.grammar_arithmetic_expression()
+            self.expect_token(TokenEnum.COLCHETEF)
     elif self.check_token(TokenEnum.NUMINT):
       self.expect_token(TokenEnum.NUMINT)
     elif self.check_token(TokenEnum.STRING):
