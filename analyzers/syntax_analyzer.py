@@ -51,6 +51,11 @@ class Parser:
   def parse(self):
     self.expect_token(TokenEnum.ALGORITMO)
     self.expect_token(TokenEnum.STRING)
+    
+    # Optional Plugin Imports
+    while self.check_token(TokenEnum.USAR):
+        self.expect_token(TokenEnum.USAR)
+        self.expect_token(TokenEnum.STRING)
 
     if self.check_token(TokenEnum.VAR):
       self.grammar_variable_block()

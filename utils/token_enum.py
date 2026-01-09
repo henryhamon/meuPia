@@ -45,4 +45,5 @@ class TokenEnum(Enum):
   COLON = ':'
   INICIO = 'inicio'
   FIMALGORITMO = 'fimalgoritmo'
+  USAR = 'usar'
   END_OF_FILE = '__EOF__'

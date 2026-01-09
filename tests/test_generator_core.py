@@ -123,3 +123,24 @@ def test_gen_boolean_logic():
     output = compile_snippet(code)
     # Check translation of operators
     assert "if (x>0) and (y<10) or ( not (z>0)):" in output
+
+def test_gen_plugin_import():
+    code = """algoritmo "Plugin"
+    usar "nlp"
+    inicio
+    fimalgoritmo"""
+    
+    output = compile_snippet(code)
+    # Check that default lib is NOT imported
+    assert "from lib.meupia_libs import *" not in output
+    # Check that plugin lib IS imported
+    assert "from lib.plugins.plugin_nlp import *" in output
+
+def test_gen_default_import():
+    code = """algoritmo "Default"
+    inicio
+    fimalgoritmo"""
+    
+    output = compile_snippet(code)
+    # Check that default lib IS imported
+    assert "from lib.meupia_libs import *" in output

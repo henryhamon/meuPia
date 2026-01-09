@@ -33,13 +33,33 @@ class CodeGenerator:
         # Cabeçalho com Wrappers do meuPiá
         self.add_line("# -*- coding: utf-8 -*-")
         self.add_line("import sys")
-        self.add_line("from lib.meupia_libs import *")
-        self.add_line("")
+        self.imports = []
 
         # Pular algoritmo e nome se existirem
         if self.check_token(TokenEnum.ALGORITMO):
             self.advance() # ALGORITMO
             self.advance() # "NOME"
+        
+        # Processar imports
+        while self.check_token(TokenEnum.USAR):
+            self.advance() # USAR
+            plugin_name = self.current_lexeme().strip('"')
+            self.imports.append(plugin_name)
+            self.advance() # "NOME_DO_PLUGIN"
+        
+        # Gerar imports do Python baseados no plugin
+        if 'nlp' in self.imports:
+             # Se usar nlp, assumimos que ele substitui a lib padrao ou eh uma lib especifica
+             # A instrução diz: "Se nlp estiver... NAO importe lib.default_ml"
+             # Como o codigo original importava lib.meupia_libs, vamos assumir que essa eh a default
+             pass 
+        else:
+             self.add_line("from lib.meupia_libs import *")
+             
+        for plugin in self.imports:
+            self.add_line(f"from lib.plugins.plugin_{plugin} import *")
+            
+        self.add_line("")
         
         if self.check_token(TokenEnum.VAR):
             self.gen_variables()

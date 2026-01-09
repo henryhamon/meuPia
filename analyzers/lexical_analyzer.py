@@ -152,6 +152,7 @@ def match_token_keywords(line: str, startIndex: int, lineNumber: int) -> Optiona
     'var': TokenEnum.VAR,
     'inicio': TokenEnum.INICIO,
     'fimalgoritmo': TokenEnum.FIMALGORITMO,
+    'usar': TokenEnum.USAR,
   }
 
   for keyword, token in keywords.items():
