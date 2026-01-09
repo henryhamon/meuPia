@@ -11,8 +11,9 @@ inicio
     entrada <- 10
     saida <- 20
     
-    ia_definir_dados(entrada, saida)
-    ia_treinar(entrada, saida)
+    
+    ia_definir_dados([[1, 2], [3, 4]], [0, 1])
+    ia_treinar([[1, 2]], [0])
     
     escreva("Modelo treinado: ")
     escreva(modelo)

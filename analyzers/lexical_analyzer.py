@@ -48,6 +48,7 @@ def scan_line(line: str, lineNumber: int) -> tuple[str, List[str]]:
     match_token_logoperators,
     match_token_mathoperators,
     match_token_parentheses,
+    match_token_brackets,
     match_token_constnumbers,
     match_token_separators,
     match_token_identifier,
@@ -231,6 +232,16 @@ def match_token_constnumbers(line: str, startIndex: int, lineNumber: int) -> Opt
 
   if prev_valid and next_valid:
     return TokenMatch(start=startIndex, end=i, replacement=TokenEnum.NUMINT.name)
+
+  return None  # Not a match
+
+def match_token_brackets(line: str, startIndex: int, lineNumber: int) -> Optional[TokenMatch]:
+  char = line[startIndex]
+
+  if char == '[':
+    return TokenMatch(start=startIndex, end=startIndex + 1, replacement=TokenEnum.COLCHETEA.name)
+  if char == ']':
+    return TokenMatch(start=startIndex, end=startIndex + 1, replacement=TokenEnum.COLCHETEF.name)
 
   return None  # Not a match
 

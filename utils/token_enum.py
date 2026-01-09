@@ -3,6 +3,8 @@ from enum import Enum
 class TokenEnum(Enum):
   ATE = 'até'
   ATR = '<-'
+  COLCHETEA = '['
+  COLCHETEF = ']'
   DE = 'de'
   E = 'e'
   ENQUANTO = 'enquanto'

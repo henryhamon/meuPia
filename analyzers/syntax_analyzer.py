@@ -230,6 +230,15 @@ class Parser:
       self.expect_token(TokenEnum.NUMINT)
     elif self.check_token(TokenEnum.STRING):
       self.expect_token(TokenEnum.STRING)
+    elif self.check_token(TokenEnum.COLCHETEA):
+      self.expect_token(TokenEnum.COLCHETEA)
+      # Recursive list support
+      if not self.check_token(TokenEnum.COLCHETEF):
+          self.grammar_arithmetic_expression()
+          while self.check_token(TokenEnum.COMMA):
+              self.expect_token(TokenEnum.COMMA)
+              self.grammar_arithmetic_expression()
+      self.expect_token(TokenEnum.COLCHETEF)
     elif self.check_token(TokenEnum.PARAB):
       self.expect_token(TokenEnum.PARAB)
       self.grammar_arithmetic_expression()

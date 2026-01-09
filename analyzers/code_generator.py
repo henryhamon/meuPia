@@ -236,6 +236,13 @@ class CodeGenerator:
                     break
             elif t == TokenEnum.PARAB.name:
                 paren_balance += 1
+            elif t == TokenEnum.COLCHETEA.name:
+                paren_balance += 1 # Using same counter since logic is identical for nesting
+            elif t == TokenEnum.COLCHETEF.name:
+                if paren_balance == 0:
+                    break
+                else:
+                    paren_balance -= 1
             
             # Stop on keywords or unrelated tokens (if balance 0? or always?)
             # Keywords like SE, ENTAO... should not appear in valid expression unless syntax error
@@ -253,6 +260,9 @@ class CodeGenerator:
             elif t == TokenEnum.E.name: l = " and "
             elif t == TokenEnum.OU.name: l = " or "
             elif t == TokenEnum.NAO.name: l = " not "
+            elif t == TokenEnum.COLCHETEA.name: l = "["
+            elif t == TokenEnum.COLCHETEF.name: l = "]"
+            elif t == TokenEnum.COMMA.name: l = ", "
             elif t == TokenEnum.ATR.name: break 
             
             # Valid tokens
@@ -260,6 +270,7 @@ class CodeGenerator:
                 TokenEnum.ID.name, TokenEnum.NUMINT.name, TokenEnum.STRING.name, 
                 TokenEnum.OPMAIS.name, TokenEnum.OPMENOS.name, TokenEnum.OPMULTI.name, TokenEnum.OPDIVI.name,
                 TokenEnum.PARAB.name, TokenEnum.PARFE.name,
+                TokenEnum.COLCHETEA.name, TokenEnum.COLCHETEF.name, TokenEnum.COMMA.name, 
                 TokenEnum.LOGIGUAL.name, TokenEnum.LOGDIFF.name, TokenEnum.LOGMENOR.name, TokenEnum.LOGMAIOR.name,
                 TokenEnum.LOGMENORIGUAL.name, TokenEnum.LOGMAIORIGUAL.name,
                 TokenEnum.E.name, TokenEnum.OU.name, TokenEnum.NAO.name
@@ -270,10 +281,10 @@ class CodeGenerator:
                  break
 
             # Adjacency check for implicit break (e.g. "20 ia_treinar")
-            # Operands: ID, NUMINT, STRING, PARFE (end of expr usually)
-            # Next Operand starts with: ID, NUMINT, STRING, PARAB, NAO
-            operands_end = [TokenEnum.ID.name, TokenEnum.NUMINT.name, TokenEnum.STRING.name, TokenEnum.PARFE.name]
-            operands_start = [TokenEnum.ID.name, TokenEnum.NUMINT.name, TokenEnum.STRING.name, TokenEnum.PARAB.name, TokenEnum.NAO.name]
+            # Operands: ID, NUMINT, STRING, PARFE, COLCHETEF
+            # Next Operand starts with: ID, NUMINT, STRING, PARAB, NAO, COLCHETEA
+            operands_end = [TokenEnum.ID.name, TokenEnum.NUMINT.name, TokenEnum.STRING.name, TokenEnum.PARFE.name, TokenEnum.COLCHETEF.name]
+            operands_start = [TokenEnum.ID.name, TokenEnum.NUMINT.name, TokenEnum.STRING.name, TokenEnum.PARAB.name, TokenEnum.NAO.name, TokenEnum.COLCHETEA.name]
             
             if len(expr_parts) > 0:
                  # Need to know the type of previous token processed
