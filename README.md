@@ -1,12 +1,12 @@
 # meuPiá – Portugol Inteligência Artificial
 
+![meuPia](assets/meuPia.png)
+
 ## 📖 Overview
 
 > **Nota:** Este projeto é um *fork* evolutivo do [`portugol-compiler`](https://github.com/LuanContarin/portugol-compiler), focado em interoperabilidade.
 
 **meuPiá** é um compilador (transpilador) de Portugol para Python projetado para o ensino de **Inteligência Artificial** e **Automação**.
-
-![meuPia](assets/meuPia.png)
 
 **meuPiá** fornece:
 
@@ -37,7 +37,7 @@ Bibliotecas Python otimizadas (o "motor" do meuPiá) que são importadas automat
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/SEU_USUARIO/meuPia.git
+git clone https://github.com/henryhamon/meuPia.git
 cd meuPia
 
 # 2. Instale as dependências do Python
