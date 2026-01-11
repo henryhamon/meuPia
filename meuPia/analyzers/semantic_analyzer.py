@@ -1,6 +1,6 @@
 from typing import Dict, List
 
-from utils.token_enum import TokenEnum
+from ..utils.token_enum import TokenEnum
 
 class SemanticError(Exception):
   pass

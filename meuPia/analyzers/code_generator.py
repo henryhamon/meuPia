@@ -1,5 +1,5 @@
 from typing import Dict, List
-from utils.token_enum import TokenEnum
+from ..utils.token_enum import TokenEnum
 
 class CodeGenerator:
     def __init__(self, lexemePairs: List[Dict[str, str]]):
@@ -54,10 +54,10 @@ class CodeGenerator:
              # Como o codigo original importava lib.meupia_libs, vamos assumir que essa eh a default
              pass 
         else:
-             self.add_line("from lib.meupia_libs import *")
+             self.add_line("from meuPia.lib.meupia_libs import *")
              
         for plugin in self.imports:
-            self.add_line(f"from lib.plugins.plugin_{plugin} import *")
+            self.add_line(f"from meuPia.lib.plugins.plugin_{plugin} import *")
             
         self.add_line("")
         

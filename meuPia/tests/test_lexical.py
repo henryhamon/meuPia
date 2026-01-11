@@ -1,6 +1,6 @@
 import pytest
-from analyzers.lexical_analyzer import scan_line, LexicalError
-from utils.token_enum import TokenEnum
+from meuPia.analyzers.lexical_analyzer import scan_line, LexicalError
+from meuPia.utils.token_enum import TokenEnum
 
 def test_scan_keywords():
     line = "para de ate faca se senao"

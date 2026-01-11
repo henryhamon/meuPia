@@ -1,7 +1,7 @@
 import pytest
-from analyzers.code_generator import CodeGenerator
-from analyzers.syntax_analyzer import Parser
-from analyzers.lexical_analyzer import scan_line
+from meuPia.analyzers.code_generator import CodeGenerator
+from meuPia.analyzers.syntax_analyzer import Parser
+from meuPia.analyzers.lexical_analyzer import scan_line
 
 def compile_snippet(portugol_code):
     lines = portugol_code.split('\n')
@@ -132,9 +132,9 @@ def test_gen_plugin_import():
     
     output = compile_snippet(code)
     # Check that default lib is NOT imported
-    assert "from lib.meupia_libs import *" not in output
+    assert "from meuPia.lib.meupia_libs import *" not in output
     # Check that plugin lib IS imported
-    assert "from lib.plugins.plugin_nlp import *" in output
+    assert "from meuPia.lib.plugins.plugin_nlp import *" in output
 
 def test_gen_default_import():
     code = """algoritmo "Default"
@@ -143,4 +143,4 @@ def test_gen_default_import():
     
     output = compile_snippet(code)
     # Check that default lib IS imported
-    assert "from lib.meupia_libs import *" in output
+    assert "from meuPia.lib.meupia_libs import *" in output

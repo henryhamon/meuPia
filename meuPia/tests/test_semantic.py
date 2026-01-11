@@ -1,6 +1,6 @@
 import pytest
-from analyzers.semantic_analyzer import SemanticAnalyzer, SemanticError
-from analyzers.lexical_analyzer import scan_line
+from meuPia.analyzers.semantic_analyzer import SemanticAnalyzer, SemanticError
+from meuPia.analyzers.lexical_analyzer import scan_line
 
 def mock_lexemes(code_lines):
     all_lexemes = []

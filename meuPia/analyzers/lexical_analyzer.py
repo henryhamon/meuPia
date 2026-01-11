@@ -2,10 +2,10 @@ import json
 import os
 from typing import Callable, List, NamedTuple, Optional
 
-from utils.file_helper import read_lines_from_file
-from utils.token_enum import TokenEnum
+from ..utils.file_helper import read_lines_from_file
+from ..utils.token_enum import TokenEnum
 
-OUTPUT_PATH_BASE = 'output/lexic_analyzer'
+# OUTPUT_PATH_BASE removed, using argument instead
 
 class LexicalError(Exception):
   pass
@@ -15,16 +15,22 @@ class TokenMatch(NamedTuple):
   end: int
   replacement: str
 
-def compile(fileName: str) -> List[str]:
+def compile(file_path: str, output_path: str = None) -> List[str]:
   print('(Lexer started)')
 
-  os.makedirs(OUTPUT_PATH_BASE, exist_ok=True)
-  lines = read_lines_from_file(fileName)
+  if output_path:
+      base_output_path = os.path.join(output_path, 'lexic_analyzer')
+  else:
+      base_output_path = 'output/lexic_analyzer'
+
+  os.makedirs(base_output_path, exist_ok=True)
+  lines = read_lines_from_file(file_path)
 
   lexeme_pairs = []
 
-  tokens_file_name = f'{fileName}_lexic-replaced.tem'
-  with open(f'{OUTPUT_PATH_BASE}/{tokens_file_name}', 'w', encoding='utf-8') as tokens_file:
+  file_name = os.path.basename(file_path)
+  tokens_file_name = f'{file_name}_lexic-replaced.tem'
+  with open(os.path.join(base_output_path, tokens_file_name), 'w', encoding='utf-8') as tokens_file:
     # Scan and write each line
     for i, line in enumerate(lines):
       print(f'Scanning line [{i+1}]...\t{line.strip()}')
@@ -32,11 +38,11 @@ def compile(fileName: str) -> List[str]:
       tokens_file.write(new_line + '\n')
       lexeme_pairs.extend(token_lexem)
 
-  pairs_file_name = f'{fileName}_lexic-lexems.tem'
-  with open(f'{OUTPUT_PATH_BASE}/{pairs_file_name}', 'w', encoding='utf-8') as lexeme_file:
+  pairs_file_name = f'{file_name}_lexic-lexems.tem'
+  with open(os.path.join(base_output_path, pairs_file_name), 'w', encoding='utf-8') as lexeme_file:
     json.dump(lexeme_pairs, lexeme_file, ensure_ascii=False, indent=2)
     
-  print(f'Output written to {OUTPUT_PATH_BASE}')
+  print(f'Output written to {base_output_path}')
   print('(Lexer ended)')
   return lexeme_pairs
 

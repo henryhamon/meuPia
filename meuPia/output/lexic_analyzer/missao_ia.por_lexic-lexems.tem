@@ -1,0 +1,522 @@
+[
+  {
+    "token": "ALGORITMO",
+    "lexeme": "algoritmo",
+    "code_index": "1:1"
+  },
+  {
+    "token": "STRING",
+    "lexeme": "\"MissaoIA\"",
+    "code_index": "1:11"
+  },
+  {
+    "token": "VAR",
+    "lexeme": "var",
+    "code_index": "2:1"
+  },
+  {
+    "token": "ID",
+    "lexeme": "dados",
+    "code_index": "2:5"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "2:10"
+  },
+  {
+    "token": "ID",
+    "lexeme": "labels",
+    "code_index": "2:12"
+  },
+  {
+    "token": "COLON",
+    "lexeme": ":",
+    "code_index": "2:19"
+  },
+  {
+    "token": "TIPO",
+    "lexeme": "inteiro",
+    "code_index": "2:21"
+  },
+  {
+    "token": "ID",
+    "lexeme": "alt",
+    "code_index": "3:1"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "3:4"
+  },
+  {
+    "token": "ID",
+    "lexeme": "i",
+    "code_index": "3:6"
+  },
+  {
+    "token": "COLON",
+    "lexeme": ":",
+    "code_index": "3:8"
+  },
+  {
+    "token": "TIPO",
+    "lexeme": "inteiro",
+    "code_index": "3:10"
+  },
+  {
+    "token": "INICIO",
+    "lexeme": "inicio",
+    "code_index": "5:1"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "6:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "6:12"
+  },
+  {
+    "token": "STRING",
+    "lexeme": "\"Iniciando Missão IA...\"",
+    "code_index": "6:13"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "6:37"
+  },
+  {
+    "token": "ID",
+    "lexeme": "dados",
+    "code_index": "8:5"
+  },
+  {
+    "token": "ATR",
+    "lexeme": "<-",
+    "code_index": "8:11"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "8:14"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "8:15"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "100",
+    "code_index": "8:16"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "8:19"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "1",
+    "code_index": "8:21"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "8:22"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "8:23"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "8:25"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "200",
+    "code_index": "8:26"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "8:29"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "0",
+    "code_index": "8:31"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "8:32"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "8:33"
+  },
+  {
+    "token": "ID",
+    "lexeme": "labels",
+    "code_index": "9:5"
+  },
+  {
+    "token": "ATR",
+    "lexeme": "<-",
+    "code_index": "9:12"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "9:15"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "1",
+    "code_index": "9:16"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "9:17"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "0",
+    "code_index": "9:19"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "9:20"
+  },
+  {
+    "token": "ID",
+    "lexeme": "ia_definir_dados",
+    "code_index": "11:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "11:21"
+  },
+  {
+    "token": "ID",
+    "lexeme": "dados",
+    "code_index": "11:22"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "11:27"
+  },
+  {
+    "token": "ID",
+    "lexeme": "labels",
+    "code_index": "11:29"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "11:35"
+  },
+  {
+    "token": "ID",
+    "lexeme": "ia_treinar",
+    "code_index": "12:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "12:15"
+  },
+  {
+    "token": "ID",
+    "lexeme": "dados",
+    "code_index": "12:16"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "12:21"
+  },
+  {
+    "token": "ID",
+    "lexeme": "labels",
+    "code_index": "12:23"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "12:29"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "14:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "14:12"
+  },
+  {
+    "token": "STRING",
+    "lexeme": "\"Dado[0][0]: \"",
+    "code_index": "14:13"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "14:27"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "15:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "15:12"
+  },
+  {
+    "token": "ID",
+    "lexeme": "dados",
+    "code_index": "15:13"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "15:18"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "0",
+    "code_index": "15:19"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "15:20"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "15:21"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "0",
+    "code_index": "15:22"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "15:23"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "15:24"
+  },
+  {
+    "token": "ID",
+    "lexeme": "ksp_conectar",
+    "code_index": "17:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "17:17"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "17:18"
+  },
+  {
+    "token": "PARA",
+    "lexeme": "para",
+    "code_index": "19:5"
+  },
+  {
+    "token": "ID",
+    "lexeme": "i",
+    "code_index": "19:10"
+  },
+  {
+    "token": "DE",
+    "lexeme": "de",
+    "code_index": "19:12"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "1",
+    "code_index": "19:15"
+  },
+  {
+    "token": "ATE",
+    "lexeme": "ate",
+    "code_index": "19:17"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "5",
+    "code_index": "19:21"
+  },
+  {
+    "token": "FACA",
+    "lexeme": "faca",
+    "code_index": "19:23"
+  },
+  {
+    "token": "ID",
+    "lexeme": "alt",
+    "code_index": "20:9"
+  },
+  {
+    "token": "ATR",
+    "lexeme": "<-",
+    "code_index": "20:13"
+  },
+  {
+    "token": "ID",
+    "lexeme": "ksp_obter_altitude",
+    "code_index": "20:16"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "20:34"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "20:35"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "21:9"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "21:16"
+  },
+  {
+    "token": "STRING",
+    "lexeme": "\"Altitude: \"",
+    "code_index": "21:17"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "21:29"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "22:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "22:12"
+  },
+  {
+    "token": "ID",
+    "lexeme": "alt",
+    "code_index": "22:13"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "22:16"
+  },
+  {
+    "token": "SE",
+    "lexeme": "se",
+    "code_index": "24:9"
+  },
+  {
+    "token": "ID",
+    "lexeme": "alt",
+    "code_index": "24:12"
+  },
+  {
+    "token": "LOGMAIOR",
+    "lexeme": ">",
+    "code_index": "24:16"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "5000",
+    "code_index": "24:18"
+  },
+  {
+    "token": "ENTAO",
+    "lexeme": "entao",
+    "code_index": "24:23"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "25:13"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "25:20"
+  },
+  {
+    "token": "STRING",
+    "lexeme": "\"Ativando estágio!\"",
+    "code_index": "25:21"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "25:40"
+  },
+  {
+    "token": "ID",
+    "lexeme": "ksp_ativar_estagio",
+    "code_index": "26:13"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "26:31"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "26:32"
+  },
+  {
+    "token": "FIMSE",
+    "lexeme": "fim_se",
+    "code_index": "27:9"
+  },
+  {
+    "token": "FIMPARA",
+    "lexeme": "fim_para",
+    "code_index": "28:5"
+  },
+  {
+    "token": "FIMALGORITMO",
+    "lexeme": "fimalgoritmo",
+    "code_index": "30:1"
+  }
+]

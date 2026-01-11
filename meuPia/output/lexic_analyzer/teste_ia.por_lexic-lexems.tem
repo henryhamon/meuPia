@@ -1,0 +1,192 @@
+[
+  {
+    "token": "ALGORITMO",
+    "lexeme": "algoritmo",
+    "code_index": "1:1"
+  },
+  {
+    "token": "STRING",
+    "lexeme": "\"Teste Matriz\"",
+    "code_index": "1:11"
+  },
+  {
+    "token": "VAR",
+    "lexeme": "var",
+    "code_index": "2:1"
+  },
+  {
+    "token": "ID",
+    "lexeme": "matriz",
+    "code_index": "3:5"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "3:11"
+  },
+  {
+    "token": "ID",
+    "lexeme": "x",
+    "code_index": "3:13"
+  },
+  {
+    "token": "COLON",
+    "lexeme": ":",
+    "code_index": "3:14"
+  },
+  {
+    "token": "TIPO",
+    "lexeme": "inteiro",
+    "code_index": "3:16"
+  },
+  {
+    "token": "INICIO",
+    "lexeme": "inicio",
+    "code_index": "4:1"
+  },
+  {
+    "token": "ID",
+    "lexeme": "matriz",
+    "code_index": "5:5"
+  },
+  {
+    "token": "ATR",
+    "lexeme": "<-",
+    "code_index": "5:12"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "5:15"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "5:16"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "1",
+    "code_index": "5:17"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "5:18"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "2",
+    "code_index": "5:20"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "5:21"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "5:22"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "5:24"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "3",
+    "code_index": "5:25"
+  },
+  {
+    "token": "COMMA",
+    "lexeme": ",",
+    "code_index": "5:26"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "4",
+    "code_index": "5:28"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "5:29"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "5:30"
+  },
+  {
+    "token": "ID",
+    "lexeme": "x",
+    "code_index": "6:5"
+  },
+  {
+    "token": "ATR",
+    "lexeme": "<-",
+    "code_index": "6:7"
+  },
+  {
+    "token": "ID",
+    "lexeme": "matriz",
+    "code_index": "6:10"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "6:16"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "0",
+    "code_index": "6:17"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "6:18"
+  },
+  {
+    "token": "COLCHETEA",
+    "lexeme": "[",
+    "code_index": "6:19"
+  },
+  {
+    "token": "NUMINT",
+    "lexeme": "1",
+    "code_index": "6:20"
+  },
+  {
+    "token": "COLCHETEF",
+    "lexeme": "]",
+    "code_index": "6:21"
+  },
+  {
+    "token": "ESCREVA",
+    "lexeme": "escreva",
+    "code_index": "7:5"
+  },
+  {
+    "token": "PARAB",
+    "lexeme": "(",
+    "code_index": "7:12"
+  },
+  {
+    "token": "ID",
+    "lexeme": "x",
+    "code_index": "7:13"
+  },
+  {
+    "token": "PARFE",
+    "lexeme": ")",
+    "code_index": "7:14"
+  },
+  {
+    "token": "FIMALGORITMO",
+    "lexeme": "fimalgoritmo",
+    "code_index": "8:1"
+  }
+]

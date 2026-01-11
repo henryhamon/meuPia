@@ -50,14 +50,21 @@ pip install -r requirements.txt
 
 ### 1. Compilando um Algoritmo
 
-Coloque seu arquivo `.por` na pasta `input/` e execute o compilador:
+Você pode usar o meuPiá como uma biblioteca python ou executando o módulo diretamente.
 
+**Via linha de comando:**
 ```bash
-python meuPia.py input/missao_espacial.por
-
+# A partir da raiz do projeto
+python -m meuPia.compiler path/to/input.por
 ```
 
-*Isso irá gerar e executar automaticamente o arquivo `output/missao_espacial.py`.*
+**Via Python:**
+```python
+from meuPia import compiler
+
+# Compila o arquivo input.por e salva o resultado em output_dir
+compiler.main('input.por', 'output_dir')
+```
 
 ### 2. Exemplo: Inteligência Artificial
 
