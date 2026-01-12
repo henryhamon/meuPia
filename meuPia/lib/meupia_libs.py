@@ -20,21 +20,8 @@ def ia_definir_dados(x, y):
 
 # ==========================================
 # Módulo Kerbal Space Program (Mock kRPC)
+# REMOVIDO: Funcionalidade movida para plugin externo (meuPia-espacial)
 # ==========================================
-
-def ksp_conectar():
-    print("[KSP] Tentando conectar ao Kerbal Space Program...")
-    time.sleep(1.5)
-    print("[KSP] Conectado com sucesso à nave 'Vostok 1'.")
-    return True
-
-def ksp_obter_altitude():
-    alt = random.uniform(0, 70000)
-    print(f"[KSP] Altitude atual: {alt:.2f} metros")
-    return alt
-
-def ksp_propulsao(potencia):
-    print(f"[KSP] Ajustando propulsão para {potencia}%")
 
 # ==========================================
 # Funções Nativas do Portugol (Auxiliares)
